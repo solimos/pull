@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pull Out Now</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2b0000, #000);
+            color: #ffdddd;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        .headline {
+            font-size: 68px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ff1e56, #ffac41);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px #ff0000aa;
+            margin-bottom: 20px;
+        }
+
+        .subline {
+            font-size: 24px;
+            font-style: italic;
+            color: #ff9999;
+            margin-bottom: 35px;
+        }
+
+        .image-placeholder {
+            width: 280px;
+            height: 280px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid #ff1e56;
+            box-shadow: 0 0 25px #ff1e56aa;
+            margin-bottom: 30px;
+        }
+
+        .quote-box {
+            background: #1a0000;
+            padding: 30px;
+            border: 2px dashed #ff5252;
+            border-radius: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ffdada;
+            margin-bottom: 30px;
+        }
+
+        .quote-box p {
+            margin: 12px 0;
+        }
+
+        .panic-button {
+            padding: 18px 48px;
+            font-size: 24px;
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 0 25px #ff0000aa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .panic-button:hover {
+            background: #ff4444;
+            transform: scale(1.08);
+        }
+
+        #alert-box {
+            margin-top: 40px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6666;
+            display: none;
+            text-shadow: 0 0 10px #ff4444;
+            animation: blink 1s infinite;
+        }
+
+        .footer-tag {
+            margin-top: 60px;
+            font-size: 13px;
+            color: #884444;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="headline">Pull Out Now</div>
+
+        <div class="subline">🚨 You’re in too deep. Or are you?</div>
+
+        <!-- Image Placeholder -->
+        <img src="pull.png" alt="Danger Zone" class="image-placeholder" />
+
+        <div class="quote-box">
+            <p>&gt; This wasn't the plan... or maybe it was. Who knows anymore.</p>
+            <p>&gt; Red flags? We thought it was a carnival.</p>
+            <p>&gt; The vibes are off. Abort mission.</p>
+            <p>&gt; Every second you stay costs 5 years of peace later.</p>
+            <p>&gt; Pull out now... before it gets even messier.</p>
+        </div>
+
+        <button class="panic-button" onclick="triggerAlert()">PULL OUT NOW</button>
+
+        <div id="alert-box">💥 TOO LATE. YOU’RE IN.</div>
+
+        <div class="footer-tag">Unadvised. Unfiltered. Unavailable for comment.</div>
+    </div>
+
+    <script>
+        function triggerAlert() {
+            const alertBox = document.getElementById('alert-box');
+            alertBox.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
